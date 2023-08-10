@@ -1,0 +1,6 @@
+<p>add-note works!</p>
+<div class="add-not-page" *ngIf="showAddNotePage">
+    <input type="text" [(ngModel)]="noteHeading" placeholder="Enter Heading">
+    <textarea [(ngModel)]="noteText" id="" placeholder="Enter notes"></textarea>
+    <button (click)="saveNote()"> Save Note</button>
+</div>

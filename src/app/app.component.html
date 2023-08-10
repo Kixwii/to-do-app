@@ -1,0 +1,25 @@
+<h2>Todo App</h2>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Handjet:wght@200&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="app.component.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<input #newNote title="write anything">
+<button (click)="addNotes(newNote.value)">Add Note</button>
+
+<h3 *ngFor="let note of notes">
+  <b>* {{note.description}}</b>
+  <div class="delete-note-btn" (click)="deleteNotes(note.id)">
+    <i class="fas fa-trash-alt"></i>
+  </div>
+</h3>
+<div id="addNoteButton" class="add-note-btn" (click)="showAddNoteInput()">
+  <i class="fas fa-plus"></i>
+</div>
+<div id="addNotePage" class="add-not-page">
+  <input type="text" id="noteHeading" placeholder="Heading">
+  <textarea id="noteText" placeholder="Enter note"></textarea>
+  <button id="saveNoteButton"> Save Note</button>
+</div>
